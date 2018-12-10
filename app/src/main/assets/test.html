@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Carson_Ho</title>
+    // JS代码
+    <script>
+            //原生调用js方法  有返回值的方式
+            function callJS(){
+                return "Android调用了JS的callJS方法";
+            }
+            //原生调用js方法  alert的方式
+            function callJSa(){
+                alert("Android调用了JS的callJSa方法");
+            }
+            //JS调用原生   这里需要和原生对接  test为定义的别名  hollo（）为原生方法
+            function callAndroid(){
+                // 由于对象映射，所以调用test对象等于调用Android映射的对象
+                test.hello("js调用了android中的hello方法");
+            }
+
+    </script>
+</head>
+<body>
+//点击按钮则调用callAndroid函数
+<button type="button" id="button1" onclick="callAndroid()">调用android</button>
+</body>
+</html>
